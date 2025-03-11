@@ -17,13 +17,19 @@ We begin the algorithm by finding and assigning s_best, the initial value of p_b
 value of x
 
 At each time step, we update the velocity of each particle with
-v_{t+1} = w(v_t) + (c_p)(r_p)(p_{best} - x_t) + (c_s)(r_2)(s_{best} - x_t) where r_1 and r_2 are randomly chosen from [0, 1]
+
+v_{t+1} = w(v_t) + (c_p)(r_p)(p_{best} - x_t) + (c_s)(r_2)(s_{best} - x_t) 
+
+where r_1 and r_2 are randomly chosen from [0, 1]
 
 We update the position of each particle with
+
 x_{t+1} = x_t + v_{t+1}
 
 We update the p_{best} value of each particle if necessary and the s_{best} value of the swarm if necessary
 
 Example functions being optimised, we find the arguments that minimise these functions:
+
 f(x,y) = (x-1)^2 +10(x^2 - y^2), -1<=x<=1.5, -1<=y<=1.5
+
 f(x,y) = xe^(-(x^2 + y^2)), -2<=x<=2, -2<=y<=2
